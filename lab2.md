@@ -80,6 +80,7 @@ d. Else if, if the path tells us that the command is "search", then you want to 
 e. In all other cases, you may want to print out "404 Not Found" to warn the users. 
 
 
+
 ## Part 2 Debugging
 Debugging is an important process of writing the codes. In the second part of the lab, you are going to practice your debugging skills! 
 
