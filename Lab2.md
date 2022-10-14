@@ -81,6 +81,7 @@ e. In all other cases, you may want to print out "404 Not Found" to warn the use
 
 
 
+
 ## Part 2 Debugging
 Debugging is an important process of writing the codes. In the second part of the lab, you are going to practice your debugging skills! 
 
