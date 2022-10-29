@@ -64,8 +64,19 @@ to start your server!
 
 The following are some screen shots of using the search engine method:
 ![Image](lab2(4).png)
-![Image](lab2(3).png)
+```
+In this screenshot we can exmaine that our path is "/add" so the if statement under the first else statement is going to run. Then the next line will split the query by "=" and check if it contains "s" which is true in this case. Thus our result array list will take the element next right after "=" and store it as a string.
+```
 ![Image](lab2(5).png)
+```
+In this screenshot we can exmaine that our path
+is "/add" so the if statement under the first else statement is going to run. Then the next line will split the query by "=" and check if it contains "s" which is true in this case. Thus our result array list the element right after "=" into the list which in this case is the "pineapple". 
+```
+![Image](lab2(3).png)
+```
+In this screenshot we can exmaine that our path
+is "/search" so the else if statement under the first else statement is going to run. Then the next line will split the query by "=" and check if it contains "s" which is true in this case. Then it checks our reuslt array list which already has "apple" and "pineapple" in it. Then it runs into a for loop checking if the elements in result array list contain app which is all true in this case and thus it just return an array list of "apple" and "pineapple"
+```
 
 Here are some general guidance ideas:
 
@@ -81,6 +92,7 @@ e. In all other cases, you may want to print out "404 Not Found" to warn the use
 
 
 
+
 ## Part 2 Debugging
 Debugging is an important process of writing the codes. In the second part of the lab, you are going to practice your debugging skills! 
 
@@ -93,6 +105,18 @@ We are going to first examine ```ArrayExamples.java```; Method ```reversed``` cl
 
 **Symptom:**
 ![Image](lab2(7).png)
+```
+Note that the output right here tells us that we have ran 4 tests and one of them failed! We can also see that the output is telling us what is causing the error so we can fix them accordingly! 
+```
+**Original Code**
+```
+	public void testReverseInPlace() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3 }, input1);
+	}
+```
+Issue: It changes the element to be the one in its reversed index, however, it doesn't change the element in its reversed index to the element we are changing. 
 
 **The Bug (Fixed Code):**
 ```
@@ -106,7 +130,7 @@ We are going to first examine ```ArrayExamples.java```; Method ```reversed``` cl
 ```
 
 **Reasoning:**
-It changes the element to be the one in its reversed index, however, it doesn't change the element in its reversed index to the element we are changing. 
+It changes the element to be the one in its reversed index, however, it doesn't change the element in its reversed index to the element we are changing. Thus we need to let the for loop only go through half of the length of the array(so it doesn't reverse and then reverse) so every time we can create a temp element storing the element we want to reverse and then change that element and put the temp element into the index where the changes happened
 
 
 The second one which we are going to examine would be the ```LinkedListExample.java```; The method ```append``` is clearly wrong. 
@@ -116,6 +140,34 @@ The second one which we are going to examine would be the ```LinkedListExample.j
 
 **Symptom:**
 ![Image](lab2(8).png)
+```
+Note that the output right here tells us that we have ran 1 tests and one of them failed! We can also see that the output is telling us what is causing the error so we can fix them accordingly! 
+```
+**Original Code**
+```
+    public void append(int value) {
+        if(this.root == null) {
+            this.root = new Node(value, null);
+            return;
+        }
+        // If it's just one element, add if after that one
+        Node n = this.root;
+        if(n.next == null) {
+            n.next = new Node(value, null);
+            return;
+        }
+        // Otherwise, loop until the end and add at the end with a null
+        while(n.next != null) {
+            n = n.next;
+            n.next = new Node(value, null);
+        }
+    }
+```
+Issue: The while loop used to have 
+```
+n.next = new Node(value, null);
+```
+inside the loop. This would cause the loop to run into an infinite loop since there would be an infinite number of nulls so n.next will never be null thus the loop will never stop becaue the condition won't met. This causes the heap to crash. 
 
 **The Bug (Fixed Code):**
 ```
@@ -146,7 +198,11 @@ The while loop used to have
 ```
 n.next = new Node(value, null);
 ```
-inside the loop. This would cause the loop to run into an infinite loop since there would be an infinite number of nulls. This causes the heap to crash. 
+inside the loop. This would cause the loop to run into an infinite loop since there would be an infinite number of nulls so n.next will never be null thus the loop will never stop becaue the condition won't met. This causes the heap to crash. So to fix it, we have to move  
+```
+n.next = new Node(value, null);
+```
+this line out of the while loop so it would actually stop when there's out of elements in the linked list and then we can do the assigning. 
 
 
 ## Conclusion
