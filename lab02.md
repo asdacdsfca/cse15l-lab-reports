@@ -64,15 +64,20 @@ to start your server!
 
 The following are some screen shots of using the search engine method:
 ![Image](lab2(4).png)
+
 ```
 In this screenshot we can exmaine that our path is "/add" so the if statement under the first else statement is going to run. Then the next line will split the query by "=" and check if it contains "s" which is true in this case. Thus our result array list will take the element next right after "=" and store it as a string.
 ```
+
 ![Image](lab2(5).png)
+
 ```
 In this screenshot we can exmaine that our path
 is "/add" so the if statement under the first else statement is going to run. Then the next line will split the query by "=" and check if it contains "s" which is true in this case. Thus our result array list the element right after "=" into the list which in this case is the "pineapple". 
 ```
+
 ![Image](lab2(3).png)
+
 ```
 In this screenshot we can exmaine that our path
 is "/search" so the else if statement under the first else statement is going to run. Then the next line will split the query by "=" and check if it contains "s" which is true in this case. Then it checks our reuslt array list which already has "apple" and "pineapple" in it. Then it runs into a for loop checking if the elements in result array list contain app which is all true in this case and thus it just return an array list of "apple" and "pineapple"
@@ -105,10 +110,13 @@ We are going to first examine ```ArrayExamples.java```; Method ```reversed``` cl
 
 **Symptom:**
 ![Image](lab2(7).png)
+
 ```
 Note that the output right here tells us that we have ran 4 tests and one of them failed! We can also see that the output is telling us what is causing the error so we can fix them accordingly! 
 ```
+
 **Original Code**
+
 ```
 	public void testReverseInPlace() {
     int[] input1 = { 3 };
@@ -116,6 +124,7 @@ Note that the output right here tells us that we have ran 4 tests and one of the
     assertArrayEquals(new int[]{ 3 }, input1);
 	}
 ```
+
 Issue: It changes the element to be the one in its reversed index, however, it doesn't change the element in its reversed index to the element we are changing. 
 
 **The Bug (Fixed Code):**
@@ -140,9 +149,11 @@ The second one which we are going to examine would be the ```LinkedListExample.j
 
 **Symptom:**
 ![Image](lab2(8).png)
+
 ```
 Note that the output right here tells us that we have ran 1 tests and one of them failed! We can also see that the output is telling us what is causing the error so we can fix them accordingly! 
 ```
+
 **Original Code**
 ```
     public void append(int value) {
