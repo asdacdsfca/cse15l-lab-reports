@@ -95,7 +95,7 @@ Below we offer a general idea about how should we implement it in our example fi
 -
 **Input**:
 ```
-yingxizhao@asdfvbniop98 911report % grep -n "cloudless" chapter-1.txt
+yingxizhao@asdfvbniop98 911report % grep -o "cloudless" chapter-1.txt
 ```
 **Output**:
 ```
