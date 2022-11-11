@@ -10,14 +10,19 @@ Set Up: Start ```DocSearchServer.java``` using vim.
 if you have entered vim mode successfully then you should see something similar to this:
 ![Image](lab4(2).png)
 
-1. ```/mai <Enter>```
+Here is a summarized version of the keys that I pressed:
+```/mai<Enter>/ca<Enter>/)<Enter>i<Enter>+args[1] <Enter><ESC>:wq```
+
+The followings are a break down of all the steps: 
+
+1. ```/mai<Enter>```
 ![Image](lab4(3).png)
 we use this command to find the place that contains ```mai``` these three characters which the only place that has it in our file is the ```main``` method. 
 
 You should see something like this if you have done it correctly:
 ![Image](lab4(4).png)
 
-2. ```/ca <Enter>```
+2. ```/ca<Enter>```
 
 Similar to step 1, we use this command to find the place that contains ```cal``` these three characters which would locate ```./technical``` for us.
 ![Image](lab4(5).png)
@@ -25,7 +30,7 @@ Similar to step 1, we use this command to find the place that contains ```cal```
 If you have done it correctly then you should see something like this:
 ![Image](lab4(6).png)
 
-3. ```/) <Enter>```
+3. ```/)<Enter>```
 
 Similar to the previous two teps, we use this command to find the place that contains ```)``` these three characters which would locate ```)``` for us. Since we were at ```./technical``` this would locate us at the first closing bracket!
 ![Image](lab4(7).png)
@@ -33,7 +38,7 @@ Similar to the previous two teps, we use this command to find the place that con
 If you have done it correctly then you should see something like this:
 ![Image](lab4(8).png)
 
-4. ```i <Enter>```
+4. ```i<Enter>```
 
 Press i to enter insert mode so you can start editing the code!
 ![Image](lab4(9).png)
