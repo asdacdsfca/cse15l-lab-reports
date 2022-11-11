@@ -13,7 +13,7 @@ if you have entered vim mode successfully then you should see something similar 
 Here is a summarized version of the keys that I pressed:
 ```/mai<Enter>/ca<Enter>/)<Enter>i<Enter>+args[1] <Enter><ESC>:wq```
 
-The followings are a break down of all the steps: 
+The followings are a break down of all the steps!: 
 
 1. ```/mai<Enter>```
 ![Image](lab4(3).png)
