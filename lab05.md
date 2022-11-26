@@ -1,6 +1,6 @@
 # Lab 05 Grading Script
 ## Introduction
-Welcome to week9! This week you are going to explore about grading script! Have you ever had a CS class that uses autograder to give feed back about your submission (programming assgiment) and wondering how does it work? In this report, we are going to focus on the leanring about some basic idea about it and get some hands on pratice!
+Welcome to week9! This week you are going to explore about grading script! Have you ever had a CS class that uses autograder to give feed back about your submission (programming assgiment) and wondering how does it work? In this report, we are going to focus on leanring about some basic idea about it and get some hands on pratice!
 
 ## Part 1: Constructing Your Grading Script
 In this part we are going to build our grading script that can give some helpful feedback about students' submissions and give it a grade based on the number of tests passed.
