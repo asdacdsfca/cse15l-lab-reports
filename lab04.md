@@ -10,12 +10,7 @@ Set Up: Start ```DocSearchServer.java``` using vim.
 if you have entered vim mode successfully then you should see something similar to this:
 ![Image](lab4(2).png)
 
-Here is a summarized version of the keys that I pressed:
-```/mai<Enter>/ca<Enter>/)<Enter>i<Enter>+args[1] <Enter><ESC>:wq```
-
-The followings are a break down of all the steps!: 
-
-1. ```/mai<Enter>```
+1. ```/mai <Enter>```
 ![Image](lab4(3).png)
 we use this command to find the place that contains ```mai``` these three characters which the only place that has it in our file is the ```main``` method. 
 
